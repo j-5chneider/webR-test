@@ -4,29 +4,59 @@
     "href": "index.html",
     "title": "book",
     "section": "",
-    "text": "Preface\nThis is a Quarto book.\nTo learn more about Quarto books visit https://quarto.org/docs/books.",
+    "text": "Preface",
     "crumbs": [
-      "Preface"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Interaktive R-Analyse</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#libraries",
+    "href": "index.html#libraries",
+    "title": "book",
+    "section": "0.1 Libraries",
+    "text": "0.1 Libraries\n\nlibrary(rio)\n\nWarning: Paket 'rio' wurde unter R Version 4.4.3 erstellt\n\nlibrary(here)\n\nhere() starts at C:/Users/schneider3/Documents/R/webR-test",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Interaktive R-Analyse</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#import-data",
+    "href": "index.html#import-data",
+    "title": "book",
+    "section": "0.2 Import Data",
+    "text": "0.2 Import Data\n\ntoy_data &lt;- rio::import(here(\"data/toy_data.csv\"))",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Interaktive R-Analyse</span>"
+    ]
+  },
+  {
+    "objectID": "index.html#running-code",
+    "href": "index.html#running-code",
+    "title": "book",
+    "section": "0.3 Running Code",
+    "text": "0.3 Running Code\nWhen you click the Render button a document will be generated that includes both content and the output of embedded code. You can embed code like this:\n\n1 + 1\n\nYou can add options to executable code like this\n\n\n[1] 4\n\n\nThe echo: false option disables the printing of code (only output is displayed).",
+    "crumbs": [
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Interaktive R-Analyse</span>"
     ]
   },
   {
     "objectID": "intro.html",
     "href": "intro.html",
-    "title": "1  Introduction",
+    "title": "2  Introduction",
     "section": "",
     "text": "This is a book created from markdown and executable code.\nSee Knuth (1984) for additional discussion of literate programming.\n\n\n\n\nKnuth, Donald E. 1984. “Literate Programming.” Comput. J. 27 (2): 97–111. https://doi.org/10.1093/comjnl/27.2.97.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>Introduction</span>"
+      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Introduction</span>"
     ]
   },
   {
     "objectID": "summary.html",
     "href": "summary.html",
-    "title": "2  Summary",
+    "title": "3  Summary",
     "section": "",
     "text": "In summary, this book has no content whatsoever.",
     "crumbs": [
-      "<span class='chapter-number'>2</span>  <span class='chapter-title'>Summary</span>"
+      "<span class='chapter-number'>3</span>  <span class='chapter-title'>Summary</span>"
     ]
   },
   {
