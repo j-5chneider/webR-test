@@ -22,40 +22,6 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
-}
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
-}
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
-}
 </style>
 
 
@@ -381,7 +347,7 @@ iframe.qwebr-output-code-browse {
 // Document level settings ----
 
 // Determine if we need to install R packages
-globalThis.qwebrInstallRPackagesList = [''];
+globalThis.qwebrInstallRPackagesList = ['rio', 'here'];
 
 // Specify possible locations to search for the repository
 globalThis.qwebrPackageRepoURLS = ['https://repo.r-wasm.org/'];
@@ -399,11 +365,11 @@ globalThis.qwebrCustomizedWebROptions = {
   "baseURL": "https://webr.r-wasm.org/v0.5.2/",
   "serviceWorkerUrl": "",
   "homedir": "/home/web_user", 
-  "channelType": "ChannelType.Automatic"
+  "channelType": "ChannelType.PostMessage"
 };
 
 // Store cell data
-globalThis.qwebrCellDetails = [{"options":{"warning":"true","classes":"","read-only":"false","fig-cap":"","out-height":"","output":"true","context":"interactive","message":"true","editor-word-wrap":"true","editor-quick-suggestions":"false","results":"markup","fig-height":5,"comment":"","label":"unnamed-chunk-1","dpi":72,"fig-width":7,"out-width":"700px","autorun":"false","editor-font-scale":"1","editor-max-height":""},"id":1,"code":"1 + 1"}];
+globalThis.qwebrCellDetails = [{"options":{"fig-height":5,"context":"setup","fig-cap":"","fig-width":7,"comment":"","output":"true","label":"unnamed-chunk-1","warning":"true","editor-font-scale":"1","read-only":"false","results":"markup","classes":"","out-height":"","dpi":72,"message":"true","editor-word-wrap":"true","editor-max-height":"","autorun":"true","editor-quick-suggestions":"false","out-width":"700px"},"id":1,"code":"# library(rio)\n# library(here)\n# toy_data <- rio::import(\"data/toy_data.csv\")\n# toy_data <- read.csv2(\"data/toy_data.csv\")\n\ntoy_data <- data.frame(y = rnorm(50, 0, 1),\n                       x1 = rnorm(50, 0, 1),\n                       x2 = rnorm(50, 0, 1))"},{"options":{"fig-height":5,"context":"interactive","fig-cap":"","fig-width":7,"comment":"","output":"true","label":"unnamed-chunk-2","warning":"true","editor-font-scale":"1","read-only":"false","results":"markup","classes":"","out-height":"","dpi":72,"message":"true","editor-word-wrap":"true","editor-max-height":"","autorun":"false","editor-quick-suggestions":"false","out-width":"700px"},"id":2,"code":"plot(toy_data)"},{"options":{"fig-height":5,"context":"interactive","fig-cap":"","fig-width":7,"comment":"","output":"true","label":"unnamed-chunk-3","warning":"true","editor-font-scale":"1","read-only":"false","results":"markup","classes":"","out-height":"","dpi":72,"message":"true","editor-word-wrap":"true","editor-max-height":"","autorun":"false","editor-quick-suggestions":"false","out-width":"700px"},"id":3,"code":"fit <- lm(y ~ x1 + x2, toy_data)\nsummary(fit)"}];
 
 </script>
 <script type="module">
@@ -1669,7 +1635,7 @@ globalThis.qwebrExecuteCode = async function (
       <button type="button" class="quarto-btn-toggle btn" data-bs-toggle="collapse" role="button" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
         <i class="bi bi-layout-text-sidebar-reverse"></i>
       </button>
-        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">webR in Quarto HTML Documents</span></a></li></ol></nav>
+        <nav class="quarto-page-breadcrumbs" aria-label="breadcrumb"><ol class="breadcrumb"><li class="breadcrumb-item"><a href="./index.html"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">webR in Quarto HTML</span></a></li></ol></nav>
         <a class="flex-grow-1" role="navigation" data-bs-toggle="collapse" data-bs-target=".quarto-sidebar-collapse-item" aria-controls="quarto-sidebar" aria-expanded="false" aria-label="Toggle sidebar navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">      
         </a>
       <button type="button" class="btn quarto-search-button" aria-label="Search" onclick="window.quartoOpenSearch();">
@@ -1697,7 +1663,7 @@ globalThis.qwebrExecuteCode = async function (
         <li class="sidebar-item">
   <div class="sidebar-item-container"> 
   <a href="./index.html" class="sidebar-item-text sidebar-link active">
- <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">webR in Quarto HTML Documents</span></span></a>
+ <span class="menu-text"><span class="chapter-number">1</span>&nbsp; <span class="chapter-title">webR in Quarto HTML</span></span></a>
   </div>
 </li>
         <li class="sidebar-item">
@@ -1730,9 +1696,8 @@ globalThis.qwebrExecuteCode = async function (
   <ul>
   <li><a href="#preface" id="toc-preface" class="nav-link active" data-scroll-target="#preface">Preface</a>
   <ul class="collapse">
-  <li><a href="#libraries" id="toc-libraries" class="nav-link" data-scroll-target="#libraries"><span class="header-section-number">0.1</span> Libraries</a></li>
-  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data"><span class="header-section-number">0.2</span> Import Data</a></li>
-  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">0.3</span> Running Code</a></li>
+  <li><a href="#import-data" id="toc-import-data" class="nav-link" data-scroll-target="#import-data"><span class="header-section-number">0.1</span> Import Data</a></li>
+  <li><a href="#running-code" id="toc-running-code" class="nav-link" data-scroll-target="#running-code"><span class="header-section-number">0.2</span> Running Code</a></li>
   </ul></li>
   </ul>
 </nav>
@@ -2057,29 +2022,17 @@ globalThis.qwebrCreateMonacoEditorInstance = function (cellData) {
 
 <section id="preface" class="level1 unnumbered">
 <h1 class="unnumbered">Preface</h1>
-<section id="libraries" class="level2" data-number="0.1">
-<h2 data-number="0.1" class="anchored" data-anchor-id="libraries"><span class="header-section-number">0.1</span> Libraries</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(rio)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>Warning: Paket 'rio' wurde unter R Version 4.4.3 erstellt</code></pre>
-</div>
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(here)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stderr">
-<pre><code>here() starts at C:/Users/schneider3/Documents/R/webR-test</code></pre>
-</div>
-</div>
-</section>
-<section id="import-data" class="level2" data-number="0.2">
-<h2 data-number="0.2" class="anchored" data-anchor-id="import-data"><span class="header-section-number">0.2</span> Import Data</h2>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>toy_data <span class="ot">&lt;-</span> rio<span class="sc">::</span><span class="fu">import</span>(<span class="fu">here</span>(<span class="st">"data/toy_data.csv"</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div>
-</section>
-<section id="running-code" class="level2" data-number="0.3">
-<h2 data-number="0.3" class="anchored" data-anchor-id="running-code"><span class="header-section-number">0.3</span> Running Code</h2>
-<p>The following code cell will be executed by <code>webR</code> within the user’s browser.</p>
+<section id="import-data" class="level2" data-number="0.1">
+<h2 data-number="0.1" class="anchored" data-anchor-id="import-data"><span class="header-section-number">0.1</span> Import Data</h2>
 <div id="qwebr-insertion-location-1"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+</section>
+<section id="running-code" class="level2" data-number="0.2">
+<h2 data-number="0.2" class="anchored" data-anchor-id="running-code"><span class="header-section-number">0.2</span> Running Code</h2>
+<p>The following code cell will be executed by <code>webR</code> within the user’s browser.</p>
+<div id="qwebr-insertion-location-2"></div>
+<noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
+<div id="qwebr-insertion-location-3"></div>
 <noscript>Please enable JavaScript to experience the dynamic code cell content on this page.</noscript>
 
 

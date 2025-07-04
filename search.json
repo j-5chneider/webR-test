@@ -6,37 +6,27 @@
     "section": "",
     "text": "Preface",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML Documents</span>"
-    ]
-  },
-  {
-    "objectID": "index.html#libraries",
-    "href": "index.html#libraries",
-    "title": "book",
-    "section": "0.1 Libraries",
-    "text": "0.1 Libraries\n\nlibrary(rio)\n\nWarning: Paket 'rio' wurde unter R Version 4.4.3 erstellt\n\nlibrary(here)\n\nhere() starts at C:/Users/schneider3/Documents/R/webR-test",
-    "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML Documents</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML</span>"
     ]
   },
   {
     "objectID": "index.html#import-data",
     "href": "index.html#import-data",
     "title": "book",
-    "section": "0.2 Import Data",
-    "text": "0.2 Import Data\n\ntoy_data &lt;- rio::import(here(\"data/toy_data.csv\"))",
+    "section": "0.1 Import Data",
+    "text": "0.1 Import Data\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML Documents</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML</span>"
     ]
   },
   {
     "objectID": "index.html#running-code",
     "href": "index.html#running-code",
     "title": "book",
-    "section": "0.3 Running Code",
-    "text": "0.3 Running Code\nThe following code cell will be executed by webR within the user’s browser.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
+    "section": "0.2 Running Code",
+    "text": "0.2 Running Code\nThe following code cell will be executed by webR within the user’s browser.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.\n\nPlease enable JavaScript to experience the dynamic code cell content on this page.",
     "crumbs": [
-      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML Documents</span>"
+      "<span class='chapter-number'>1</span>  <span class='chapter-title'>webR in Quarto HTML</span>"
     ]
   },
   {
